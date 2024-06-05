@@ -45,7 +45,7 @@ function App(props) {
                 <SocialButton
                   name=" IbrahimAzeem"
                   icon={faLinkedinIn}
-                  url="https://www.linkedin.com/in/ibrahim-cs1/"
+                  link="https://www.linkedin.com/in/ibrahim-cs1/"
                   style={{ backgroundColor: "#0077b5" }}
                 />
                 <SocialButton
