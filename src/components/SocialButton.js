@@ -1,11 +1,11 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-function SocialButton({ name, link, icon, style }) {
+function SocialButton({ name, link, icon, style, color }) {
     return (
       <div className="pt-3">
         <a href={link} target="_blank" rel="noopener noreferrer">
           <button className="social-button" style={style}>
-            <FontAwesomeIcon icon={icon} color="white" className="mr-2" /> {name}
+            <FontAwesomeIcon icon={icon} color={color ? color : "white"} className="mr-2" /> {name}
           </button>
         </a>
       </div>
