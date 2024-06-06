@@ -1,10 +1,12 @@
 import "./App.css";
 import ReposCard from "./components/ReposCard";
 import SocialButton from "./components/SocialButton";
+import ExperienceTab from "./components/ExperienceTab"
 import avatar from "../src/assets/avatar2.jpeg";
 import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faSnapchat } from "@fortawesome/free-brands-svg-icons";
+import { faGoogle } from "@fortawesome/free-brands-svg-icons";
 
 function App(props) {
   return (
@@ -40,6 +42,14 @@ function App(props) {
               </span>
             </p>
             <SocialButton
+              name=" Email me"
+              icon={faGoogle}
+              link={`mailto:${"ibrahimazeem41@gmail.com"}?subject=${"Hello Ibrahim"}`}
+              style={{ 
+                background: "linear-gradient(to right, #4285f4, #34a853 50%, #fbbc05 100%, #ea4335)" 
+              }}
+            />
+            <SocialButton
               name=" IbrahimAzeem"
               icon={faLinkedinIn}
               link="https://www.linkedin.com/in/ibrahim-cs1/"
@@ -74,7 +84,7 @@ function App(props) {
               </p>
             </div>
             <div className="container mx-auto">
-              <h1 className="text-m font-bold mb-4 text-left pt-3">Pinned</h1>
+              <h1 className="text-base font-bold mb-4 text-left pt-3">Repositories</h1>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 overflow-auto">
                 <ReposCard
                   name={"BulkyBeastSite"}
@@ -153,11 +163,11 @@ function App(props) {
                   </span>
                 </ReposCard>
               </div>
-              <h1 className="text-m font-bold mb-4 text-left pt-3">Experience</h1>
+              <h1 className="text-base font-bold mb-4 text-left pt-3">Experience</h1>
               <div class="bg-white p-4 rounded-lg border text-left">
-                    <h2 class="text-sm font-semibold mb-2">
-                        Hello World
-                    </h2>
+                    <ExperienceTab designation={"Software Engineer"} company={"Southville Solutions"} date={"July 2022 - Present"}/>
+                    <ExperienceTab designation={"Associate Software Engineer"} company={"Devntech Pvt Ltd"} date={"January 2022 - June 2022"}/>
+                    <ExperienceTab designation={"Software Developer"} company={"WorldSrc (Freelance - Remote)"} date={"November 2020 - November 2021"}/>
               </div>
             </div>
           </div>
