@@ -3,6 +3,8 @@ import ReposCard from "./components/ReposCard";
 import SocialButton from "./components/SocialButton";
 import ExperienceTab from "./components/ExperienceTab"
 import avatar from "../src/assets/avatar2.jpeg";
+import data from './demoData';
+import {ProjectSouthville, ProjectDevntech, ProjectWorldSrc} from './components/Projects'
 import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faSnapchat } from "@fortawesome/free-brands-svg-icons";
@@ -20,26 +22,12 @@ function App(props) {
               src={avatar}
               alt=""
             />
-            <h1 className="font-bold text-left text-3xl">M Ibrahim</h1>
+            <h1 className="font-bold text-left text-3xl">{data.title}</h1>
             <h2 className="text-m text-left mb-3 text-gray-500">
-              yaibrahim • he/him
+              {data.sub_title}
             </h2>
             <p className="text-sm text-left">
-              Software Engineer 🧑‍💻 <br />
-              • Snapchat👻: ibrahimazeem41 <br />
-              • Gym Freak 🔩 <br />
-              • Love Challenges <br />
-              • We create our own demons <br />
-              Instagram:{" "}
-              <span className="text-blue-500">
-                <a
-                  href="https://www.instagram.com/ya.xheikh"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  @ya.xheikh
-                </a>
-              </span>
+              <div dangerouslySetInnerHTML={{ __html: data.bio }} />
             </p>
             <SocialButton
               name=" Email me"
@@ -77,10 +65,7 @@ function App(props) {
             <div className="border h-auto rounded p-2 text-left">
               <p className="text-xs p-2 text-gray-500"> yaibrahim/README.md </p>
               <p className="text-sm pb-4">
-                I am a Software Developer with robust problem-solving skills and
-                proven experience in creating and designing software in a Test
-                driven environment. Software Engineer with 3+ years of
-                experience in Ruby on rails (ROR).
+                {data.aboutme}
               </p>
             </div>
             <div className="container mx-auto">
@@ -165,9 +150,9 @@ function App(props) {
               </div>
               <h1 className="text-base font-bold mb-4 text-left pt-3">Experience</h1>
               <div class="bg-white p-4 rounded-lg border text-left">
-                    <ExperienceTab designation={"Software Engineer"} company={"Southville Solutions"} date={"July 2022 - Present"}/>
-                    <ExperienceTab designation={"Associate Software Engineer"} company={"Devntech Pvt Ltd"} date={"January 2022 - June 2022"}/>
-                    <ExperienceTab designation={"Software Developer"} company={"WorldSrc (Freelance - Remote)"} date={"November 2020 - November 2021"}/>
+                    <ExperienceTab designation="Software Engineer" company="Southville Solutions" date="July 2022 - Present" description={<ProjectSouthville />} />
+                    <ExperienceTab designation={"Associate Software Engineer"} company={"Devntech Pvt Ltd"} date={"Jan 2022 - Jun 2022"} description={<ProjectDevntech />}/>
+                    <ExperienceTab designation={"Software Developer"} company={"WorldSrc (Freelance - Remote)"} date={"Nov 2020 - Nov 2021"} description={<ProjectWorldSrc />}/>
               </div>
             </div>
           </div>
