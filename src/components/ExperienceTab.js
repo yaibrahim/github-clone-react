@@ -13,6 +13,7 @@ function ExperienceTab({designation, company, date, description}) {
                 {company}
             </h2>
             <p className="p-2 text-sm mb-3"> {description} </p>
+            <hr style={{ borderTop: "1px solid lightgrey" }}></hr>
         </div>
     );
 }
