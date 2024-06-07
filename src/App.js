@@ -2,6 +2,7 @@ import "./App.css";
 import ReposCard from "./components/ReposCard";
 import SocialButton from "./components/SocialButton";
 import ExperienceTab from "./components/ExperienceTab"
+import { Element } from 'react-scroll';
 import avatar from "../src/assets/avatar2.jpeg";
 import data from './demoData';
 import {ProjectSouthville, ProjectDevntech, ProjectWorldSrc} from './components/Projects'
@@ -10,7 +11,7 @@ import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faSnapchat } from "@fortawesome/free-brands-svg-icons";
 import { faGoogle } from "@fortawesome/free-brands-svg-icons";
 
-function App(props) {
+function App() {
   return (
     <div className="flex flex-1">
       <main className="bg-white-300 flex-1 p-3 overflow-auto">
@@ -62,98 +63,104 @@ function App(props) {
           </div>
 
           <div className="pt-5 w-full sm:w-3/4 md:w-2/3 lg:w-1/2 xl:w-1/2">
-            <div className="border h-auto rounded p-2 text-left">
-              <p className="text-xs p-2 text-gray-500"> yaibrahim/README.md </p>
-              <p className="text-sm pb-4">
-                {data.aboutme}
-              </p>
-            </div>
+            <Element name="aboutme" className="section">
+              <div className="border h-auto rounded p-2 text-left">
+                <p className="text-xs p-2 text-gray-500"> yaibrahim/README.md </p>
+                <p className="text-sm pb-4">
+                  {data.aboutme}
+                </p>
+              </div>
+            </Element>
             <div className="container mx-auto">
-              <h1 className="text-base font-bold mb-4 text-left pt-3">Repositories</h1>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 overflow-auto">
-                <ReposCard
-                  name={"BulkyBeastSite"}
-                  link={"https://github.com/yaibrahim/BulkyBeastSIte"}
-                >
-                  <span className="inline-block bg-red-100 text-red-800 text-xs px-2 py-1 rounded">
-                    HTML
-                  </span>
-                </ReposCard>
+              <Element name="repositories" className="section">
+                <h1 className="text-xl font-bold mb-4 text-left pt-3">Repositories</h1>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 overflow-auto">
+                  <ReposCard
+                    name={"BulkyBeastSite"}
+                    link={"https://github.com/yaibrahim/BulkyBeastSIte"}
+                  >
+                    <span className="inline-block bg-red-100 text-red-800 text-xs px-2 py-1 rounded">
+                      HTML
+                    </span>
+                  </ReposCard>
 
-                <ReposCard
-                  name={"eCommercioProject"}
-                  link={"https://github.com/yaibrahim/eCommercioProject"}
-                >
-                  <span className="inline-block bg-red-200 text-red-800 text-xs px-2 py-1 rounded">
-                    Ruby
-                  </span>
-                  <div className="mt-2">
-                    <span className="text-gray-600 text-xs">⭐ 1</span>
-                  </div>
-                </ReposCard>
+                  <ReposCard
+                    name={"eCommercioProject"}
+                    link={"https://github.com/yaibrahim/eCommercioProject"}
+                  >
+                    <span className="inline-block bg-red-200 text-red-800 text-xs px-2 py-1 rounded">
+                      Ruby
+                    </span>
+                    <div className="mt-2">
+                      <span className="text-gray-600 text-xs">⭐ 1</span>
+                    </div>
+                  </ReposCard>
 
-                <ReposCard
-                  name={"at_your_doorstep-Ya_Ibrahim"}
-                  link={
-                    "https://github.com/atyourdoorstep/at_your_doorstep-Ya_Ibrahim"
-                  }
-                >
-                  <p className="text-gray-700 mb-2 text-xs">
-                    Its an Flutter App Named At your Doorstep
-                  </p>
-                  <span className="inline-block bg-green-100 text-green-800 text-xs px-2 py-1 rounded">
-                    Dart
-                  </span>
-                  <div className="mt-2 flex items-center">
-                    <span className="text-gray-600 text-xs mr-4">⭐ 2</span>
-                  </div>
-                </ReposCard>
+                  <ReposCard
+                    name={"at_your_doorstep-Ya_Ibrahim"}
+                    link={
+                      "https://github.com/atyourdoorstep/at_your_doorstep-Ya_Ibrahim"
+                    }
+                  >
+                    <p className="text-gray-700 mb-2 text-xs">
+                      Its an Flutter App Named At your Doorstep
+                    </p>
+                    <span className="inline-block bg-green-100 text-green-800 text-xs px-2 py-1 rounded">
+                      Dart
+                    </span>
+                    <div className="mt-2 flex items-center">
+                      <span className="text-gray-600 text-xs mr-4">⭐ 2</span>
+                    </div>
+                  </ReposCard>
 
-                <ReposCard
-                  name={"work-shift-planning"}
-                  link="https://github.com/yaibrahim/work-shift-planning"
-                >
-                  <p className="text-gray-700 mb-2 text-xs">
-                    Build a REST application from scratch that could serve as a
-                    work planning service. Business requirements: A worker has
-                    shifts A shift is 8 hours long A worker never has two shifts
-                    on the same day It is a 24 hour timetable 0-8, 8-16, 16-24.
-                  </p>
-                  <span className="inline-block bg-red-200 text-red-800 text-xs px-2 py-1 rounded">
-                    Ruby
-                  </span>
-                  <div className="mt-2">
-                    <span className="text-gray-600 text-xs">⭐ 1</span>
-                  </div>
-                </ReposCard>
+                  <ReposCard
+                    name={"work-shift-planning"}
+                    link="https://github.com/yaibrahim/work-shift-planning"
+                  >
+                    <p className="text-gray-700 mb-2 text-xs">
+                      Build a REST application from scratch that could serve as a
+                      work planning service. Business requirements: A worker has
+                      shifts A shift is 8 hours long A worker never has two shifts
+                      on the same day It is a 24 hour timetable 0-8, 8-16, 16-24.
+                    </p>
+                    <span className="inline-block bg-red-200 text-red-800 text-xs px-2 py-1 rounded">
+                      Ruby
+                    </span>
+                    <div className="mt-2">
+                      <span className="text-gray-600 text-xs">⭐ 1</span>
+                    </div>
+                  </ReposCard>
 
-                <ReposCard
-                  name={"yaibrahim"}
-                  link={"https://github.com/yaibrahim/yaibrahim"}
-                >
-                  <p className="text-gray-700 mb-2 text-xs">
-                    Config files for my GitHub profile.
-                  </p>
-                  <span className="inline-block bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded">
-                    JavaScript
-                  </span>
-                </ReposCard>
+                  <ReposCard
+                    name={"yaibrahim"}
+                    link={"https://github.com/yaibrahim/yaibrahim"}
+                  >
+                    <p className="text-gray-700 mb-2 text-xs">
+                      Config files for my GitHub profile.
+                    </p>
+                    <span className="inline-block bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded">
+                      JavaScript
+                    </span>
+                  </ReposCard>
 
-                <ReposCard
-                  name={"github-clone-react"}
-                  link={"https://github.com/yaibrahim/github-clone-react"}
-                >
-                  <span className="inline-block bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded">
-                    JavaScript
-                  </span>
-                </ReposCard>
-              </div>
-              <h1 className="text-base font-bold mb-4 text-left pt-3">Experience</h1>
-              <div class="bg-white p-4 rounded-lg border text-left">
-                    <ExperienceTab designation="Software Engineer" company="Southville Solutions" date="July 2022 - Present" description={<ProjectSouthville />} />
-                    <ExperienceTab designation={"Associate Software Engineer"} company={"Devntech Pvt Ltd"} date={"Jan 2022 - Jun 2022"} description={<ProjectDevntech />}/>
-                    <ExperienceTab designation={"Software Developer"} company={"WorldSrc (Freelance - Remote)"} date={"Nov 2020 - Nov 2021"} description={<ProjectWorldSrc />}/>
-              </div>
+                  <ReposCard
+                    name={"github-clone-react"}
+                    link={"https://github.com/yaibrahim/github-clone-react"}
+                  >
+                    <span className="inline-block bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded">
+                      JavaScript
+                    </span>
+                  </ReposCard>
+                </div>
+              </Element>
+              <Element name="experience" className="section">
+                <h1 className="text-xl font-bold mb-4 text-left pt-3">Experience</h1>
+                <div className="bg-white p-4 rounded-lg border text-left">
+                  <ExperienceTab designation="Software Engineer" company="Southville Solutions" date="July 2022 - Present" description={<ProjectSouthville />} />
+                  <ExperienceTab designation="Associate Software Engineer" company="Devntech Pvt Ltd" date="Jan 2022 - Jun 2022" description={<ProjectDevntech />} />
+                  <ExperienceTab designation="Software Developer" company="WorldSrc (Freelance - Remote)" date="Nov 2020 - Nov 2021" description={<ProjectWorldSrc />} />
+                </div>
+              </Element>
             </div>
           </div>
         </div>
