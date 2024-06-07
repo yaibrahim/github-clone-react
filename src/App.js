@@ -3,6 +3,7 @@ import ReposCard from "./components/ReposCard";
 import SocialButton from "./components/SocialButton";
 import ExperienceTab from "./components/ExperienceTab"
 import { Element } from 'react-scroll';
+import Skills from './components/skills/Skills';
 import avatar from "../src/assets/avatar2.jpeg";
 import data from './demoData';
 import {ProjectSouthville, ProjectDevntech, ProjectWorldSrc} from './components/Projects'
@@ -60,6 +61,11 @@ function App() {
               style={{ backgroundColor: "#F6F11E", color: "black" }}
               color="black"
             />
+            <Element name="skills" className="section">
+              <div className="App bg-white rounded-lg border mt-4">
+                  <Skills />
+              </div>
+            </Element>
           </div>
 
           <div className="pt-5 w-full sm:w-3/4 md:w-2/3 lg:w-1/2 xl:w-1/2">
