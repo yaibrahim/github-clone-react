@@ -7,9 +7,9 @@ function SocialButton({ name, link, icon, style, color }) {
     };
 
     return (
-      <div className="pt-3">
+      <div className="p-2">
           <button className="social-button" style={style} onClick={handleClick}>
-            <FontAwesomeIcon icon={icon} color={color ? color : "white"} className="mr-2" /> {name}
+            <FontAwesomeIcon icon={icon} color={color ? color : "white"} className="" /> {name}
           </button>
       </div>
     );

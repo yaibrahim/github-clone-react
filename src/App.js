@@ -31,38 +31,36 @@ function App() {
             <p className="text-sm text-left">
               <div dangerouslySetInnerHTML={{ __html: data.bio }} />
             </p>
-            <SocialButton
-              name=" Email me"
-              icon={faGoogle}
-              link={`mailto:${"ibrahimazeem41@gmail.com"}?subject=${"Hello Ibrahim"}`}
-              style={{ 
-                background: "linear-gradient(to right, #4285f4, #34a853 50%, #fbbc05 100%, #ea4335)" 
-              }}
-            />
-            <SocialButton
-              name=" IbrahimAzeem"
-              icon={faLinkedinIn}
-              link="https://www.linkedin.com/in/ibrahim-cs1/"
-              style={{ backgroundColor: "#0077b5" }}
-            />
-            <SocialButton
-              name=" ya.xheikh"
-              icon={faInstagram}
-              link="https://www.instagram.com/ya.xheikh/"
-              style={{
-                background:
-                  "linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%)",
-              }}
-            />
-            <SocialButton
-              name=" Ibrahim Fit"
-              icon={faSnapchat}
-              link="https://www.snapchat.com/add/ibrahimazeem41"
-              style={{ backgroundColor: "#F6F11E", color: "black" }}
-              color="black"
-            />
+            <div className="flex flex-row">
+              <SocialButton
+                icon={faGoogle}
+                link={`mailto:${"ibrahimazeem41@gmail.com"}?subject=${"Hello Ibrahim"}`}
+                style={{ 
+                  background: "linear-gradient(to right, #4285f4, #34a853 50%, #fbbc05 100%, #ea4335)" 
+                }}
+              />
+              <SocialButton
+                icon={faLinkedinIn}
+                link="https://www.linkedin.com/in/ibrahim-cs1/"
+                style={{ backgroundColor: "#0077b5" }}
+              />
+              <SocialButton
+                icon={faInstagram}
+                link="https://www.instagram.com/ya.xheikh/"
+                style={{
+                  background:
+                    "linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%)",
+                }}
+              />
+              <SocialButton
+                icon={faSnapchat}
+                link="https://www.snapchat.com/add/ibrahimazeem41"
+                style={{ backgroundColor: "#F6F11E", color: "black" }}
+                color="black"
+              />
+            </div>
             <Element name="skills" className="section">
-              <div className="App bg-white rounded-lg border mt-4">
+              <div className="App bg-white rounded-lg border mt-4 p-2">
                   <Skills />
               </div>
             </Element>
