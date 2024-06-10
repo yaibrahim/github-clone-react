@@ -17,9 +17,9 @@ function App() {
     <div className="flex flex-1">
       <main className="bg-white-300 flex-1 p-3 overflow-auto">
         <div className="text-center flex flex-col justify-center p-2 sm:flex-row">
-          <div className="p-4 text-left relative">
+          <div className="p-4 w-80 text-left relative">
             <img
-              className="block w-72 mb-4"
+              className="block mb-4"
               style={{ borderRadius: "100%" }}
               src={avatar}
               alt=""

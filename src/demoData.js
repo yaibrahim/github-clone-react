@@ -1,10 +1,7 @@
 const data = {
   title: "M Ibrahim",
   sub_title: "yaibrahim • he/him",
-  aboutme: `I am a Software Developer with robust problem-solving skills and
-    proven experience in creating and designing software in a Test
-    driven environment. Software Engineer with 3+ years of
-    experience in Ruby on rails (ROR).`,
+  aboutme: `I am a dynamic Software Developer with a knack for solving complex problems and a track record of designing top-notch software in test-driven environments. With over 3 years of experience specializing in Ruby on Rails (RoR), I bring innovation and expertise to every project..`,
   bio: `
     Software Engineer 🧑‍💻 <br />
     • Snapchat👻: ibrahimazeem41 <br />
