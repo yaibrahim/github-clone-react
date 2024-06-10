@@ -35,7 +35,7 @@ const Skills = () => {
             ]
         }
     ];
-
+    //secret_eSTrwBU7YQs1thGUishThAN77z9Y6Wewy9NQqvyQdXe
     return (
         <div className="p-4 sm:p-2 md:p-2">
             {skillsData.map((categoryData, index) => (

@@ -2,6 +2,7 @@ import "./App.css";
 import ReposCard from "./components/ReposCard";
 import SocialButton from "./components/SocialButton";
 import ExperienceTab from "./components/ExperienceTab"
+import Education from "./components/Education"
 import { Element } from 'react-scroll';
 import Skills from './components/skills/Skills';
 import avatar from "../src/assets/avatar2.jpeg";
@@ -77,7 +78,7 @@ function App() {
             </Element>
             <div className="container mx-auto">
               <Element name="repositories" className="section">
-                <h1 className="text-xl font-bold mb-4 text-left pt-3">Repositories</h1>
+                <h1 className="text-2xl font-bold mb-4 text-left pt-3">Repositories</h1>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 overflow-auto">
                   <ReposCard
                     name={"BulkyBeastSite"}
@@ -158,11 +159,20 @@ function App() {
                 </div>
               </Element>
               <Element name="experience" className="section">
-                <h1 className="text-xl font-bold mb-4 text-left pt-3">Experience</h1>
+                <h1 className="text-2xl font-bold mb-4 text-left pt-3">Experience</h1>
                 <div className="bg-white p-4 rounded-lg border text-left">
                   <ExperienceTab designation="Software Engineer" company="Southville Solutions" date="July 2022 - Present" description={<ProjectSouthville />} />
                   <ExperienceTab designation="Associate Software Engineer" company="Devntech Pvt Ltd" date="Jan 2022 - Jun 2022" description={<ProjectDevntech />} />
                   <ExperienceTab designation="Software Developer" company="WorldSrc (Freelance - Remote)" date="Nov 2020 - Nov 2021" description={<ProjectWorldSrc />} />
+                </div>
+              </Element>
+              
+              <Element name="education" className="section">
+                <h1 className="text-2xl font-bold mb-4 text-left pt-3">Education</h1>
+                <div className="bg-white p-4 rounded-lg border text-left">
+                  <Education degree="Bachelor of Science in Computer Science" institute="University of Central Punjab" date="2018 - 2022" />
+                  <hr className="mb-4" style={{ borderTop: "1px solid lightgrey" }}></hr>
+                  <Education degree="Intermediate in Computer Science (ICS)" institute="Govt. Islamia College Civil lines" date="2015 - 2017" />
                 </div>
               </Element>
             </div>

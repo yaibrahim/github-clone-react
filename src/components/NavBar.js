@@ -22,7 +22,7 @@ function NavBar() {
           <Link to="experience" smooth={true} duration={500} className="cursor-pointer text-black">Experience</Link>
           <Link to="skills" smooth={true} duration={500} className="cursor-pointer text-black">Skills</Link>
           <Link to="aboutme" smooth={true} duration={500} className="cursor-pointer text-black">About Me</Link>
-          
+          <Link to="education" smooth={true} duration={500} className="cursor-pointer text-black">Education</Link>
         </nav>
         <div className="md:hidden">
           <button onClick={toggleMenu} className="text-black focus:outline-none">
@@ -36,6 +36,7 @@ function NavBar() {
           <Link to="experience" smooth={true} duration={500} className="block cursor-pointer text-black" onClick={toggleMenu}>Experience</Link>
           <Link to="aboutme" smooth={true} duration={500} className="block cursor-pointer text-black" onClick={toggleMenu}>About Me</Link>
           <Link to="skills" smooth={true} duration={500} className="block cursor-pointer text-black" onClick={toggleMenu}>Skills</Link>
+          <Link to="education" smooth={true} duration={500} className="block cursor-pointer text-black" onClick={toggleMenu}>Education</Link>
         </nav>
       )}
     </header>
