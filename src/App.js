@@ -1,17 +1,13 @@
 import "./App.css";
-import ReposCard from "./components/ReposCard";
-import SocialButton from "./components/SocialButton";
-import ExperienceTab from "./components/ExperienceTab"
-import Education from "./components/Education"
-import { Element } from 'react-scroll';
-import Skills from './components/skills/Skills';
+import Educations from "./main-components/Eductions";
+import Buttons from "./main-components/Buttons";
+import Experiences from "./main-components/Experiences";
+import Repos from "./main-components/Repos";
+import Skills from "./components/skills/Skills";
 import avatar from "../src/assets/avatar2.jpeg";
-import data from './demoData';
-import {ProjectSouthville, ProjectDevntech, ProjectWorldSrc} from './components/Projects'
-import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
-import { faInstagram } from "@fortawesome/free-brands-svg-icons";
-import { faSnapchat } from "@fortawesome/free-brands-svg-icons";
-import { faGoogle } from "@fortawesome/free-brands-svg-icons";
+
+import { Element } from "react-scroll";
+import data from "./demoData";
 
 function App() {
   return (
@@ -32,37 +28,10 @@ function App() {
             <p className="text-sm text-left">
               <div dangerouslySetInnerHTML={{ __html: data.bio }} />
             </p>
-            <div className="flex flex-row">
-              <SocialButton
-                icon={faGoogle}
-                link={`mailto:${"ibrahimazeem41@gmail.com"}?subject=${"Hello Ibrahim"}`}
-                style={{ 
-                  background: "linear-gradient(to right, #4285f4, #34a853 50%, #fbbc05 100%, #ea4335)" 
-                }}
-              />
-              <SocialButton
-                icon={faLinkedinIn}
-                link="https://www.linkedin.com/in/ibrahim-cs1/"
-                style={{ backgroundColor: "#0077b5" }}
-              />
-              <SocialButton
-                icon={faInstagram}
-                link="https://www.instagram.com/ya.xheikh/"
-                style={{
-                  background:
-                    "linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%)",
-                }}
-              />
-              <SocialButton
-                icon={faSnapchat}
-                link="https://www.snapchat.com/add/ibrahimazeem41"
-                style={{ backgroundColor: "#F6F11E", color: "black" }}
-                color="black"
-              />
-            </div>
+            <Buttons />
             <Element name="skills" className="section">
               <div className="App bg-white rounded-lg border mt-4 p-2">
-                  <Skills />
+                <Skills />
               </div>
             </Element>
           </div>
@@ -70,110 +39,23 @@ function App() {
           <div className="pt-5 w-full sm:w-3/4 md:w-2/3 lg:w-1/2 xl:w-1/2">
             <Element name="aboutme" className="section">
               <div className="border h-auto rounded p-2 text-left">
-                <p className="text-xs p-2 text-gray-500"> yaibrahim/README.md </p>
-                <p className="text-sm pb-4">
-                  {data.aboutme}
+                <p className="text-xs p-2 text-gray-500">
+                  {" "}
+                  yaibrahim/README.md{" "}
                 </p>
+                <p className="text-sm pb-4">{data.aboutme}</p>
               </div>
             </Element>
             <div className="container mx-auto">
               <Element name="repositories" className="section">
-                <h1 className="text-2xl font-bold mb-4 text-left pt-3">Repositories</h1>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 overflow-auto">
-                  <ReposCard
-                    name={"BulkyBeastSite"}
-                    link={"https://github.com/yaibrahim/BulkyBeastSIte"}
-                  >
-                    <span className="inline-block bg-red-100 text-red-800 text-xs px-2 py-1 rounded">
-                      HTML
-                    </span>
-                  </ReposCard>
-
-                  <ReposCard
-                    name={"eCommercioProject"}
-                    link={"https://github.com/yaibrahim/eCommercioProject"}
-                  >
-                    <span className="inline-block bg-red-200 text-red-800 text-xs px-2 py-1 rounded">
-                      Ruby
-                    </span>
-                    <div className="mt-2">
-                      <span className="text-gray-600 text-xs">⭐ 1</span>
-                    </div>
-                  </ReposCard>
-
-                  <ReposCard
-                    name={"at_your_doorstep-Ya_Ibrahim"}
-                    link={
-                      "https://github.com/atyourdoorstep/at_your_doorstep-Ya_Ibrahim"
-                    }
-                  >
-                    <p className="text-gray-700 mb-2 text-xs">
-                      Its an Flutter App Named At your Doorstep
-                    </p>
-                    <span className="inline-block bg-green-100 text-green-800 text-xs px-2 py-1 rounded">
-                      Dart
-                    </span>
-                    <div className="mt-2 flex items-center">
-                      <span className="text-gray-600 text-xs mr-4">⭐ 2</span>
-                    </div>
-                  </ReposCard>
-
-                  <ReposCard
-                    name={"work-shift-planning"}
-                    link="https://github.com/yaibrahim/work-shift-planning"
-                  >
-                    <p className="text-gray-700 mb-2 text-xs">
-                      Build a REST application from scratch that could serve as a
-                      work planning service. Business requirements: A worker has
-                      shifts A shift is 8 hours long A worker never has two shifts
-                      on the same day It is a 24 hour timetable 0-8, 8-16, 16-24.
-                    </p>
-                    <span className="inline-block bg-red-200 text-red-800 text-xs px-2 py-1 rounded">
-                      Ruby
-                    </span>
-                    <div className="mt-2">
-                      <span className="text-gray-600 text-xs">⭐ 1</span>
-                    </div>
-                  </ReposCard>
-
-                  <ReposCard
-                    name={"yaibrahim"}
-                    link={"https://github.com/yaibrahim/yaibrahim"}
-                  >
-                    <p className="text-gray-700 mb-2 text-xs">
-                      Config files for my GitHub profile.
-                    </p>
-                    <span className="inline-block bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded">
-                      JavaScript
-                    </span>
-                  </ReposCard>
-
-                  <ReposCard
-                    name={"github-clone-react"}
-                    link={"https://github.com/yaibrahim/github-clone-react"}
-                  >
-                    <span className="inline-block bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded">
-                      JavaScript
-                    </span>
-                  </ReposCard>
-                </div>
+                <Repos />
               </Element>
               <Element name="experience" className="section">
-                <h1 className="text-2xl font-bold mb-4 text-left pt-3">Experience</h1>
-                <div className="bg-white p-4 rounded-lg border text-left">
-                  <ExperienceTab designation="Software Engineer" company="Southville Solutions" date="July 2022 - Present" description={<ProjectSouthville />} />
-                  <ExperienceTab designation="Associate Software Engineer" company="Devntech Pvt Ltd" date="Jan 2022 - Jun 2022" description={<ProjectDevntech />} />
-                  <ExperienceTab designation="Software Developer" company="WorldSrc (Freelance - Remote)" date="Nov 2020 - Nov 2021" description={<ProjectWorldSrc />} />
-                </div>
+                <Experiences />
               </Element>
-              
+
               <Element name="education" className="section">
-                <h1 className="text-2xl font-bold mb-4 text-left pt-3">Education</h1>
-                <div className="bg-white p-4 rounded-lg border text-left">
-                  <Education degree="Bachelor of Science in Computer Science" institute="University of Central Punjab" date="2018 - 2022" />
-                  <hr className="mb-4" style={{ borderTop: "1px solid lightgrey" }}></hr>
-                  <Education degree="Intermediate in Computer Science (ICS)" institute="Govt. Islamia College Civil lines" date="2015 - 2017" />
-                </div>
+                <Educations />
               </Element>
             </div>
           </div>
