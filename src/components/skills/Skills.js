@@ -33,9 +33,18 @@ const Skills = () => {
                 { name: 'Heroku', highlighted: true },
                 { name: 'AWS', highlighted: false }
             ]
+        },
+        {
+            category: 'Soft Skills',
+            skills: [
+                { name: 'Observation', highlighted: true },
+                { name: 'Team Management', highlighted: true },
+                { name: 'Communication', highlighted: true },
+                { name: 'Multi-tasking', highlighted: true },
+                { name: 'Gym Coach', highlighted: true }
+            ]
         }
     ];
-    //secret_eSTrwBU7YQs1thGUishThAN77z9Y6Wewy9NQqvyQdXe
     return (
         <div className="p-4 sm:p-2 md:p-2">
             {skillsData.map((categoryData, index) => (
