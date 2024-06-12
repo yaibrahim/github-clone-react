@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import NavBar from "./components/NavBar";
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -10,7 +9,6 @@ root.render(
   <React.StrictMode>
     <div className="mx-auto bg-grey-400">
       <div className="min-h-screen flex flex-col">
-        <NavBar />
         <App />
       </div>
     </div>
