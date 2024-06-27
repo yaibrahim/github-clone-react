@@ -1,14 +1,20 @@
-import React, { useState, useEffect } from 'react';
-import './App.css';
-import Educations from './main-components/Eductions';
-import Buttons from './main-components/Buttons';
-import Experiences from './main-components/Experiences';
-import Repos from './main-components/Repos';
-import Skills from './components/skills/Skills';
-import avatar from '../src/assets/avatar2.jpeg';
-import { Element } from 'react-scroll';
-import data from './demoData';
-import NavBar from './components/NavBar'; // Ensure the path is correct
+import React, { useState, useEffect } from "react";
+import "./App.css";
+import Educations from "./main-components/Eductions";
+import Buttons from "./main-components/Buttons";
+import Experiences from "./main-components/Experiences";
+import Repos from "./main-components/Repos";
+import Skills from "./components/skills/Skills";
+import avatar from "../src/assets/avatar2.jpeg";
+import { Element } from "react-scroll";
+import data from "./demoData";
+import NavBar from "./components/NavBar";
+import {
+  Route,
+  Routes,
+  useNavigate
+} from "react-router-dom";
+import ProjectPage from "./components/ProjectPage";
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -31,6 +37,12 @@ function App() {
     setDarkMode(!darkMode);
   };
 
+  let navigate = useNavigate();
+
+  const handleButtonClick = () => {
+    navigate("/project");
+  };
+
   return (
     <div className={`flex flex-col min-h-screen ${darkMode ? 'dark' : ''}`}>
       <NavBar toggleDarkMode={toggleDarkMode} darkMode={darkMode} />
@@ -44,7 +56,9 @@ function App() {
                 src={avatar}
                 alt=""
               />
-              <h1 className="font-bold text-left text-3xl dark:text-white">{data.title}</h1>
+              <h1 className="font-bold text-left text-3xl dark:text-white">
+                {data.title}
+              </h1>
               <h2 className="text-m text-left mb-3 text-gray-500 dark:text-gray-400">
                 {data.sub_title}
               </h2>
@@ -52,6 +66,12 @@ function App() {
                 <div dangerouslySetInnerHTML={{ __html: data.bio }} />
               </p>
               <Buttons />
+              <button
+                  onClick={handleButtonClick}
+                  className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ml-2"
+                >
+                  Go to Projects
+                </button>
               <Element name="skills" className="section">
                 <div className="App bg-white dark:bg-gray-800 rounded-lg border dark:border-gray-700 mt-4 p-2">
                   <Skills />
@@ -73,10 +93,10 @@ function App() {
                   <Repos darkMode={darkMode} />
                 </Element>
                 <Element name="experience" className="section">
-                  <Experiences darkMode={darkMode}/>
+                  <Experiences darkMode={darkMode} />
                 </Element>
                 <Element name="education" className="section">
-                  <Educations darkMode={darkMode}/>
+                  <Educations darkMode={darkMode} />
                 </Element>
               </div>
             </div>
@@ -87,4 +107,13 @@ function App() {
   );
 }
 
-export default App;
+function Main() {
+  return (
+    <Routes>
+      <Route path="/" element={<App />} />
+      <Route path="/project" element={<ProjectPage />} />
+    </Routes>
+  );
+}
+
+export default Main;
