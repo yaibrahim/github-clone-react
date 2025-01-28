@@ -1,3 +1,20 @@
+function ProjectBayt() {
+  return (
+    <div>
+      <ul class="list-disc list-inside text-gray-700 space-y-2">
+        <li>Led the enhancement of YallaMotor's backend, resulting in a <span class="font-semibold text-blue-600">30% improvement</span> in response times and optimized system performance under high traffic.</li>
+        <li>Boosted Video Schema Markup for seven regions, improving SEO performance and increasing video visibility.</li>
+        <li>Designed and deployed RESTful APIs that streamlined data exchange between microservices, cutting manual processes by <span class="font-semibold text-blue-600">60%</span>.</li>
+        <li>Built CI/CD pipelines with Jenkins and GitHub Actions, reducing release cycles by <span class="font-semibold text-blue-600">50%</span>. Integrated monitoring tools like New Relic and Sentry to ensure system stability.</li>
+        <li>Developed a cloud infrastructure on AWS (EC2, S3, RDS), cutting hosting expenses by <span class="font-semibold text-blue-600">25%</span> while ensuring scalability.</li>
+        <li>Implemented an AI-powered feature for content creators on YallaMotor, allowing automatic article generation using keywords, increasing content production efficiency.</li>
+        <li>Spearheaded a new, robust task on YallaMotor's platform that enhances user engagement by generating personalized content suggestions based on user behavior and preferences.</li>
+      </ul>
+    </div>
+
+  );
+}
+
 function ProjectSouthville() {
   return (
     <div>
