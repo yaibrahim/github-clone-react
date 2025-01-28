@@ -213,4 +213,4 @@ function ProjectWorldSrc() {
   </div>;
 }
 
-export { ProjectSouthville, ProjectDevntech, ProjectWorldSrc };
+export { ProjectSouthville, ProjectDevntech, ProjectWorldSrc, ProjectBayt };
