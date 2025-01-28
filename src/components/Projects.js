@@ -1,16 +1,27 @@
 function ProjectBayt() {
   return (
-    <div>
+    <div class="bg-gray-100 p-8 rounded-2xl shadow-lg max-w-4xl mx-auto my-8">
+      <p class="text-gray-700 leading-relaxed mb-4">
+        I work on <span class="font-semibold">YallaMotor</span>, a leading automotive platform in the Middle East. YallaMotor is owned by <span class="font-semibold">Bayt.com</span> and offers comprehensive car reviews, listings, and the latest automotive news, helping connect buyers and sellers across the region.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        My role primarily involves developing and enhancing features on YallaMotor to make car buying and selling easier and more informed. This includes working on user-friendly interfaces and back-end improvements, employing <span class="font-semibold">Ruby on Rails</span>, and utilizing software development best practices to enhance performance and reliability.
+      </p>
+      <p class="text-gray-700 leading-relaxed mb-8">
+        Through my work, I contribute to Bayt.com’s mission to provide an accessible and trustworthy automotive marketplace.
+      </p>
+
       <ul class="list-disc list-inside text-gray-700 space-y-2">
-        <li>Led the enhancement of YallaMotor's backend, resulting in a <span class="font-semibold text-blue-600">30% improvement</span> in response times and optimized system performance under high traffic.</li>
+        <li>Led the enhancement of YallaMotor's backend, resulting in a <span class="font-semibold">30% improvement</span> in response times and optimized system performance under high traffic.</li>
         <li>Boosted Video Schema Markup for seven regions, improving SEO performance and increasing video visibility.</li>
-        <li>Designed and deployed RESTful APIs that streamlined data exchange between microservices, cutting manual processes by <span class="font-semibold text-blue-600">60%</span>.</li>
-        <li>Built CI/CD pipelines with Jenkins and GitHub Actions, reducing release cycles by <span class="font-semibold text-blue-600">50%</span>. Integrated monitoring tools like New Relic and Sentry to ensure system stability.</li>
-        <li>Developed a cloud infrastructure on AWS (EC2, S3, RDS), cutting hosting expenses by <span class="font-semibold text-blue-600">25%</span> while ensuring scalability.</li>
+        <li>Designed and deployed RESTful APIs that streamlined data exchange between microservices, cutting manual processes by <span class="font-semibold">60%</span>.</li>
+        <li>Built CI/CD pipelines with Jenkins and GitHub Actions, reducing release cycles by <span class="font-semibold">50%</span>. Integrated monitoring tools like New Relic and Sentry to ensure system stability.</li>
+        <li>Developed a cloud infrastructure on AWS (EC2, S3, RDS), cutting hosting expenses by <span class="font-semibold">25%</span> while ensuring scalability.</li>
         <li>Implemented an AI-powered feature for content creators on YallaMotor, allowing automatic article generation using keywords, increasing content production efficiency.</li>
         <li>Spearheaded a new, robust task on YallaMotor's platform that enhances user engagement by generating personalized content suggestions based on user behavior and preferences.</li>
       </ul>
     </div>
+
 
   );
 }
