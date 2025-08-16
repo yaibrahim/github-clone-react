@@ -20,6 +20,18 @@ function App() {
   const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "https://platform.linkedin.com/badges/js/profile.js";
+    script.async = true;
+    script.defer = true;
+    document.body.appendChild(script);
+  
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+
+  useEffect(() => {
     const storedDarkMode = localStorage.getItem('darkMode') === 'true';
     setDarkMode(storedDarkMode);
   }, []);
@@ -75,6 +87,24 @@ function App() {
               <Element name="skills" className="section">
                 <div className="App bg-white dark:bg-gray-800 rounded-lg border dark:border-gray-700 mt-4 p-2">
                   <Skills />
+                </div>
+                <div className="mt-4">
+                  <div
+                    className="badge-base LI-profile-badge"
+                    data-locale="en_US"
+                    data-size="medium"
+                    data-theme="light"
+                    data-type="VERTICAL"
+                    data-vanity="ibrahim-cs1"
+                    data-version="v1"
+                  >
+                    <a
+                      className="badge-base__link LI-simple-link"
+                      href="https://pk.linkedin.com/in/ibrahim-cs1?trk=profile-badge"
+                    >
+                      Ibrahim Azeem
+                    </a>
+                  </div>
                 </div>
               </Element>
             </div>
